@@ -1,0 +1,10 @@
+<h2>Lista de Tareas</h2>
+<ul>
+  <li *ngFor="let tarea of tareas">
+    {{ tarea.titulo }} - {{ tarea.descripcion }} - {{ tarea.fechaCreacion | date }} - {{ tarea.estado ? 'Completado' : 'Pendiente' }}
+    <button (click)="seleccionarTarea(tarea)">Editar</button>
+    <button (click)="eliminarTarea(tarea.id)">Eliminar</button>
+  </li>
+</ul>
+
+<app-tarea-form *ngIf="tareaSeleccionada" [tarea]="tareaSeleccionada" (guardar)="guardarTarea($event)"></app-tarea-form>

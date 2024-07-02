@@ -1,0 +1,17 @@
+<p>Tarea</p>
+<form (ngSubmit)="onSubmit()">
+    <label for="titulo">Título</label>
+    <input type="text" id="titulo" [(ngModel)]="tarea.titulo" name="titulo" required>
+  
+    <label for="descripcion">Descripción</label>
+    <textarea id="descripcion" [(ngModel)]="tarea.descripcion" name="descripcion" required></textarea>
+  
+    <label for="fechaCreacion">Fecha de Creación</label>
+    <input type="date" id="fechaCreacion" [(ngModel)]="tarea.fechaCreacion" name="fechaCreacion" required>
+  
+    <label for="estado">Estado</label>
+    <input type="checkbox" id="estado" [(ngModel)]="tarea.estado" name="estado">
+  
+    <button type="submit">Guardar</button>
+  </form>
+  
